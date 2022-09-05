@@ -1,0 +1,18 @@
+body {
+    font-size: 1.2rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+code {
+    color: blue;
+    font-weight: bold;
+}
+
+.inicio {
+    display: flex;
+    justify-content: space-around;
+}
+
+.inicio div {
+    max-width: 600px;
+}

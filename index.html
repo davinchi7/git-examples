@@ -1,16 +1,45 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="css/estilos.css">
 
 </head>
 
 <body>
     <h1>Hola, curso de GIT</h1>
 
+    <div class="inicio">
+        <div><img src="img/init.png"></div>
+        <div>
+            <p>Iniciamos el proyecto con <code>git init</code></p>
+            <p>Podemos ver el estado de los archivos con <code>git status -s</code>. Las interrogaciones ?? indican que los archivos no están añadidos a git y por tanto no tienen seguimiento</p>
+            <p>Para añadir los archivos utilizamos <code>git add [nombre del archivo]</code> Con esto añadimos el archivo al stage.</p>
+            <br>Sabremos los archivos que están en el Stage al hacer un <code>git status -s</code>. <br/> Si tienen una A delante en verde es que no se han añadido al repositorio todavía. <br/> Si tienen una M, significa que han sido modificados pero
+            no se han añadido al Stage las modificaciones. <br/> Si no aparece nada significa que han sido añadidos al repositorio en su última versión.</p>
+
+            <p>Para añadir lo que está en el stage al repositorio, usamos <code>git commit -m "Comentario de la operación"</code></p>
+            <p>Si hacemos un cambio en un archivos, y queremos guardarlo en el respositorio, primero debemos añadirlo de nuevo con el <code>git add [nombre del archivo]</code></p>
+            <p>Para ver los commits que hemos hecho hasta el momento usagmos <code>git log --online</code> Aparecerá el identificador del commit, la rama y el comentario del commit.</p>
+            <p>Si queremos deshacer todo el código hasta un commit en concreto usaremos <code>git reset --hard [identificador del commit]</code></p>
+            <p>Hay que tener en cuenta que al hacer un reset --hard, todos commits posteriores a diecho commit se elimnan y portanto todos los cambios. Igualmente se eliminan los cambios de ese identificador en cuestión y se quedan los del commit anterior.</p>
+            <p>Ejemplo. Si tengo los commits:
+                <ul>
+                    <li>1abc Cambios 1</li>
+                    <li>2abc Cambios 2</li>
+                    <li>3abc Cambios 3</li>
+                    <li>4abc Cambios 4</li>
+                    <li>5abc Cambios 5</li>
+                </ul>
+                Si hacemos el <code>git reset --hard 3abc</code>, es decir, al Cambios 3, vamos a perder los cambios de 5, 4 y 3 incluidos y la aplicación se quedará con el estado correspondiente a cuando se creó el commit "Cambios 2".
+            </p>
+        </div>
+
+    </div>
     <p>
         Restaurar a la primera isntantanea:
         <code>git reset --hard edb8b5b</code>
     </p>
+    
 </body>
 
 </html>
